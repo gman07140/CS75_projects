@@ -1,0 +1,10 @@
+
+<script>sweetAlert("A simple message for you!");</script>
+<p class="lead text-danger">
+    Sorry!
+</p>
+<p class="text-danger">
+    <?= sweetAlert($message) ?>
+</p>
+
+<a href="javascript:history.go(-1);">Back</a>

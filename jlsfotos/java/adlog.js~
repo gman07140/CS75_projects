@@ -1,0 +1,8 @@
+$('input#name-submit').on('click', function() {    		
+    var name = $('input#name').val();		   		
+    if ($.trim(name) != '') {			   		
+	$.post('name.php', {name: name}, function(data) {	
+	    $('div#name-data').text(data);			//replace this line with 'alert(data)' to show php output as an alert
+	});							
+    }								
+});

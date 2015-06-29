@@ -1,0 +1,35 @@
+//**source for transparency:
+http://stackoverflow.com/questions/806000/transparent-background-but-not-the-content-text-images-inside-it-in-css-on**//
+
+a:link 
+{
+    background: rgb(0, 0, 0) transparent;
+    font-weight: normal;
+}
+
+a:active 
+{
+    font-weight: bold;
+}
+
+ul.ex 
+{
+    margin: 0px 3px 10px 0px;
+}
+
+li.ex
+{
+    display: inline;
+    margin: 0px 13px;
+    font-size: 18px;
+}
+
+div.pop
+{
+    margin: 10px 10px 10px 10px;
+    padding: 0px 10px 5px 5px;
+}
+option.up
+{
+    text-transform: uppercase;
+}

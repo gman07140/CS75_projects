@@ -1,0 +1,25 @@
+<script src="jquery.js"></script>
+<script src="adlog.js"></script>
+
+<form action="adminlog.php" method="post">
+    <fieldset>
+        <div class="form-group">
+            <input autofocus class="form-control" id="adName" name="adName" placeholder="Admin" type="text"/>
+        </div>
+	<div class="form-group" id="name-data">
+            <input autofocus class="form-control" id="name-data" name="adName" placeholder="Admin" type="text"/>
+        </div>
+	<div id="name-data" class="form-group"></div>
+        <div class="form-group">
+            <input class="form-control" id="adPassword" name="adPassword" placeholder="Password" type="password"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" id="name-submit">Log In</button>
+        </div>
+    </fieldset>
+</form>
+<script src="jquery.js"></script>
+<script src="adlog.js"></script>
+<div>
+    or go to <a href="clientlog.php">client</a> to log in as client
+</div>

@@ -1,0 +1,64 @@
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+
+
+#content{
+    width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#content ul{
+    list-style-type: none;
+    }
+#content li{
+    float: left;
+    width: 200px;
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#content a:hover{
+    background-color: transparent;
+}
+
+
+#content img{
+    -webkit-webkit-transition: all is ease;
+    -moz-webkit-transition: all is ease;
+    -ms-webkit-transition: all is ease;
+    -o-webkit-transition: all is ease;
+    transition: all is ease;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ffffff;
+    border-radius: 5px;
+
+  -o-transition:color .03s ease-out, border .15s ease-in;
+  -ms-transition:color .03s ease-out, border .15s ease-in;
+  -moz-transition:color .03s ease-out, border .15s ease-in;
+  -webkit-transition:color .03s ease-out, border .15s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .03s ease-out, border .15s ease-in;
+}
+
+#content img:hover{
+    -webkit-webkit-transition: all is ease;
+    -moz-webkit-transition: all is ease;
+    -ms-webkit-transition: all is ease;
+    -o-webkit-transition: all is ease;
+    transition: all is ease;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    box-shadow: 10px 10px 10px rbga(0,0,0,.5);
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6699FF;
+    border-radius: 5px;
+}

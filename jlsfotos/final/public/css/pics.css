@@ -1,0 +1,47 @@
+div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: center;
+    text-align: center;
+}	
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.centered img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.centered {
+  float: center;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #0000ff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+div.img a:hover img 
+{
+    border: 1px solid #0000ff;
+}
+
+div.desc 
+{
+  text-align: center;
+  font-weight: normal;
+  width: 120px;
+  margin: 5px;
+}
