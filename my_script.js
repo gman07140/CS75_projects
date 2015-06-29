@@ -1,18 +1,69 @@
+function validate(form_id, email)
+{
+	var reg = /^([A-Za-z0-9_\-\.]){1,}\@([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/;
+	var address = document.forms[form_id].elements[email].value;
+
+	//if (address == '' || !reg.test(address()))
+	if (reg.test(address) == false)
+	{
+		document.forms[form_id].elements[email].focus();
+		return false;
+	}
+}
+
 $("#submit").click( function() {
- 
-	if( $("#username").val() == "")
-	  $("#ack").html("Username is mandatory field -- Please Enter.");
-	else if( $("#pass").val() == "" )
-	  $("#wack").html("Password is mandatory field -- Please Enter.");
+ 	var user = $("#username").val();
+ 	var pass = $("#pass").val();
+ 	var confirm = $("#confirm").val();
+	if($.trim(user) == "")
+	{
+	    $("#ack").html("Username is mandatory field -- Please Enter.");
+	    $("#wack").empty();
+	    $("#cwack").empty();
+	    $("#wwack").empty();
+	    $("#username").focus();
+	}
+	else if($.trim(pass) == "")
+	{
+	    $("#wack").html("Password is mandatory field -- Please Enter.");
+	    $("#ack").empty();
+	    $("#cwack").empty();
+	    $("#wwack").empty();
+	    $("#pass").focus();
+	}
+	else if(confirm == "")
+	{
+	    $("#cwack").html("Please confirm your password!");
+	    $("#ack").empty();
+	    $("#wack").empty();
+	    $("#wwack").empty();
+	    $("#confirm").focus();
+	}
+	else if(pass !== confirm)
+	{
+	    $("#cwack").html("Passwords do not match!");
+	    $("#ack").empty();
+	    $("#awck").empty();
+	    $("#wwack").empty();
+	    $("#confirm").focus();
+	}
+	else if( validate('myForm','email') == false)
+	{
+		$("#wwack").html("Please enter a valid email address");
+		$("#ack").empty();
+		$("#wack").empty();
+		$("#cwack").empty();
+	}
 	else
 	  $.post( $("#myForm").attr("action"),
 	         $("#myForm :input").serializeArray(),
 			 function(info) {
- 
+
 			   $("#ack").empty();
-			   $("#ack").html(info);
 			   $("#wack").empty();
-			   $("#wack").html(info);
+			   $("#wwack").empty();
+			   $("#wwack").html(info);
+			   $("#cwack").empty();
 				clear();
 			 });
  
@@ -26,9 +77,7 @@ function clear() {
 	$("#myForm :input").each( function() {
 	      $(this).val("");
 	});
- 
 }
-
 
 //when the submit button is clicked...create new var 'name' with the value of users input into 'name' field...
 //as long as the name is valid...//posting the data to the php file.  1st param is file for info to be posted
