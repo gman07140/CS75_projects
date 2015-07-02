@@ -185,4 +185,30 @@
             trigger_error("Invalid template: $template", E_USER_ERROR);
         }
     }
+
+    // same as client header, just with a logout button for pages they see while logged in
+    function clrender($template, $values = [])
+        {
+        // if template exists, render it
+        if (file_exists("templates/$template"))
+        {
+            // extract variables into local scope
+            extract($values);
+
+            // render header
+            require("templates/clientheader.php");
+
+            // render template
+            require("templates/$template");
+
+            // render footer
+            require("templates/ffooter.php");
+        }
+
+        // else err
+        else
+        {
+            trigger_error("Invalid template: $template", E_USER_ERROR);
+        }
+    }
 ?>

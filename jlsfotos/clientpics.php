@@ -15,5 +15,5 @@
         ];
     }
           
-    crender("client_pics.php", ["photos" => $photos, "title" => "Client_Table"]);
+    clrender("client_pics.php", ["photos" => $photos, "title" => "Client_Table"]);
 ?>

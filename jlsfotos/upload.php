@@ -13,7 +13,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
 	    if ($_FILES["image"]["error"][$f] == 4) 
 	    {
 	        continue; // Skip file if any error found
-	    }	       
+	    }
 	    if ($_FILES["image"]["error"][$f] == 0) 
 	    {	           
 			if( ! in_array(pathinfo($name, PATHINFO_EXTENSION), $valid_formats) )
@@ -25,8 +25,18 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
 	        { // No error found! Upload files 
 	            $file_name = $_FILES["image"]["name"][$f];
 	            $full_name = "images/$file_name";
-	            $upped = query("INSERT INTO images (userID, link) VALUES(?, ?)", $_SESSION["userid"], $full_name);
-	            $count++; // Number of successfully uploaded files
+	            $numrows = query("SELECT link FROM images WHERE userID= ? AND link= ?", $_SESSION["userid"], $full_name);
+	            $num = count($numrows);
+	            if($num == 0)
+	            {
+	            	$upped = query("INSERT INTO images (userID, link) VALUES(?, ?)", $_SESSION["userid"], $full_name);
+		            $count++; // Number of successfully uploaded files
+	            }
+	            else
+	            {
+	            	$message[] = "$name is not a valid format";
+					continue; // Skip invalid file formats
+	            }
 	        }
 	    }
 	}

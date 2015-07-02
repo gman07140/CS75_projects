@@ -1,24 +1,24 @@
 // set focus on field when page loads
 $(document).ready(function()
 {
-	$("#adName").focus();
+	$("#email").focus();
 });
 
 $("#submit").click( function() {
- 	var adName = $("#adName").val();
- 	var pass = $("#adPassword").val();
+ 	var email = $("#email").val();
+ 	var pass = $("#pass").val();
 
-	if($.trim(adName) == "")
+	if($.trim(email) == "")
 	{
-	    $("#nameack").html("Please enter a name");
+	    $("#emailack").html("Please enter an email");
 	    $("#passack").empty();
-	    $("#adName").focus();
+	    $("#email").focus();
 	}
 	else if($.trim(pass) == "")
 	{
 	    $("#passack").html("Please enter a password");
-	    $("#nameack").empty();
-	    $("#adPassword").focus();
+	    $("#emailack").empty();
+	    $("#pass").focus();
 	}
 
 	else

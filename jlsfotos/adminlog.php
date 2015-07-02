@@ -2,15 +2,19 @@
 
     // configuration
     require("fconfig.php"); 
-
+    // if form was submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
         // validate submission
         if (empty($_POST["adName"]))
         {
             echo "You must provide your admin name";
+            exit();
         }
         else if (empty($_POST["adPassword"]))
         {
             echo "You must provide your password";
+            exit();
         }
 
         // query database for user
@@ -31,11 +35,20 @@
                 // redirect to admin page
                 echo '<meta http-equiv="refresh" content="0;URL=admintable2.php" />';
             }
+            else
+            {
+            	echo "Invalid password";
+            }
         }
         // else apologize
         else
         {
-            echo "Invalid name and/or password.";
+            echo "Invalid admin name";
         }
+    }
+    else
+    {
+        crender("adlogin_form.php");
+    }
 
 ?>

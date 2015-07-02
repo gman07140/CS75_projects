@@ -8,7 +8,7 @@
     logout();
 
     // redirect user
-    redirect("adlogin.php");
+    redirect("adminlog.php");
 
 require("footer.php"); 
 

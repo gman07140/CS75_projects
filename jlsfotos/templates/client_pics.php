@@ -7,7 +7,7 @@
     </h1>
 </div>
 
-<form name="form1" method="post" action="select.php">
+<form id="form1" name="form1" method="post" action="select.php" onsubmit="myFunction()">
     <div class="form-group">
         <input name="select" type="submit" id="select" value="Select">
     </div>
@@ -17,14 +17,15 @@
                 <?php foreach ($photos as $photo): ?>
                     <li><a class="fancybox" rel="group" title="photos" href="/<?= $photo["link"]?>"$><img src=
                     "<?= $photo["link"]?>" width="200" height="120" alt=""/></a><input name="data[]" type="checkbox" id="
-                    data" value="<?php echo $photo['link']; ?>"></li>
+                    data" value="<?php echo $photo["link"]; ?>"></li>
                 <?php endforeach ?>
             </ul>
         </div>
         <hr>
     </div>
 </form>
-<script type="text/javascript" src="jquery.js"></script>
+
+
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="/java/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <!-- Add fancyBox -->
@@ -34,4 +35,27 @@
     $(document).ready(function() {
         $(".fancybox").fancybox();
     });
+</script>
+<script type="text/javascript">
+    function myFunction() {
+    formblock= document.getElementById('form1');
+        forminputs = formblock.getElementsByTagName('input');
+
+        //build the array of checked users
+        var arry = [];
+        for (i = 0; i < forminputs.length; i++) 
+        {
+            if (forminputs[i].checked)
+            {
+                arry.push(forminputs[i].getAttribute('value'));
+            }
+        }
+        
+        //check if any boxes were checked, alert user if none were
+        if (arry.length < 1)
+        {
+            alert("Please select at least one picture");
+            return false;
+        }
+}
 </script>

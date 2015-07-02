@@ -2,6 +2,8 @@
     // configuration
     require("fconfig.php");
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
         // validate submission
         if (empty($_POST["email"]))
         {
@@ -38,4 +40,9 @@
         {
         echo "email not found";
         }
+    }
+    else
+    {
+        crender("clientlogin_form.php");
+    }
 ?>

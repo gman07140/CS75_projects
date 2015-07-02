@@ -25,11 +25,11 @@
         
         if($mail->Send() == false)
         {
+            echo "email failed due to " . $mail->ErrInfo . "";
             die($mail->ErrInfo);
         }
         else
         {
             echo "request submitted!";
-            redirect("/success.php");
         }
 ?>

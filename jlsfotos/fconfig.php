@@ -19,11 +19,11 @@
     session_start();
 
     // require authentication for most pages
-    if (!preg_match('/^\/clientlog*/', $_SERVER["PHP_SELF"]) && !preg_match('/^\/*/', $_SERVER["PHP_SELF"]))
+    if (!preg_match('/^\/clientlog*/', $_SERVER["PHP_SELF"]) && !preg_match('/^\/adminlog*/', $_SERVER["PHP_SELF"]) && !preg_match('/^\/newpass*/', $_SERVER["PHP_SELF"]))
     {
-        if (empty($_SESSION["userID"]))
+        if (empty($_SESSION["userID"]) && empty($_SESSION["adminID"]))
         {
-            redirect("clientlogin.php");
+            redirect("clientlog.php");
         }
     }
 

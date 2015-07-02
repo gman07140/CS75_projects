@@ -20,15 +20,15 @@
         
         $mail->Subject = "Pictures up and ready!";
         
-        $mail->Body = "Hi " . $_POST["username"] . "! \n\n Click the following link to access your pictures:\n\n final/clientlog.php \n\n Your login name will be this email address and the password will be your last name.";
+        $mail->Body = "Hi " . $_POST["username"] . "! \n\n Click the following link to access your pictures:\n\n http://192.168.0.22/clientlog.php \n\n Your login name will be this email address and the password will be your last name.";
         
         if($mail->Send() == false)
         {
+            echo "email failed due to " . $mail->ErrInfo . "";
             die($mail->ErrInfo);
         }
         else
         {
-            echo "client notified!";
-            redirect("/alertsuc.php");
+            echo "Client notified!";
         }
 ?>

@@ -7,29 +7,27 @@
     // configuration
     require("fconfig.php");
 
-    // Check if delete button active, start this 
-    if($_POST['delete'])
-    {
-    	if (empty($_POST['data'] ))
+    //$nd variable passed from delete2.js
+    $nd = $_POST['arry'];
+
+    	if (empty($nd))
     	{
-    		echo '<meta http-equiv="refresh" content="0;URL=admintable2.php" />';
-    		return false;
+    		exit();
     	}
     	else
     	{
-	        $id = $_POST['data'];
-	        $count = count($id);
+	        $count = count($nd);
 	        for($i = 0; $i < $count; $i++)
 	        {
 	            //echo "<br> value = ".$id[$i]."Jumlah = ".$count ;
-	            $numrows = query("SELECT COUNT(email) AS CountofEmails FROM users WHERE userID='$id[$i]'");
-	            $sql = query("DELETE FROM users WHERE userID='$id[$i]'");
+	            $numrows = query("SELECT COUNT(email) AS CountofEmails FROM users WHERE userID='$nd[$i]'");
+	            $sql = query("DELETE FROM users WHERE userID='$nd[$i]'");
 	        }
     	}
-    }   
-    // if successful refresh page
-    if ($numrows[0]["CountofEmails"] != 0)
-    {
-        echo '<meta http-equiv="refresh" content="0;URL=admintable2.php" />';
-    }
+
+        // if successful refresh page
+        if ($numrows[0]["CountofEmails"] != 0)
+        {
+            echo 'goodjob';
+        }
 ?>

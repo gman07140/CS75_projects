@@ -1,9 +1,3 @@
-<script>
-function myFunction() {
-    location.reload();
-}
-</script>
-
 <div class="wrapper">
 <h1>
     <?php 
@@ -22,18 +16,18 @@ function myFunction() {
     </fieldset>
 </form>
 
-<form action="alert.php" method="post">
+<form class="ajax" action="alert.php" method="post">
     <fieldset>
         <div class="form-group">
-            <input autofocus class="form-control" name="email" type="hidden" value="<?php echo $address[0]['email'] ?>"/>
-            <input autofocus class="form-control" name="client" type="hidden" value="<?php echo $address[0]['username'] ?>"/>
+            <input autofocus class="form-control" name="email" id="email" type="hidden" value="<?php echo $address[0]['email'] ?>"/>
+            <input autofocus class="form-control" name="username" id="username" type="hidden" value="<?php echo $address[0]['username'] ?>"/>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default">Alert Client</button>
+            <div id="progress"></div>
         </div>
     </fieldset>
 </form>
-        
 
 <form name="form3" method="post" action="deletepic.php">
     <div style="float:center;" class="form-group">
@@ -51,7 +45,8 @@ function myFunction() {
         </div>
     </div>
 </form>
-<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript" src="/java/alert2.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="/java/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <!-- Add fancyBox -->
