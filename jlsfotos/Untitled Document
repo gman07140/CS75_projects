@@ -2,5 +2,4 @@
 <head>
 </head>
 <body>
-<script type-"text/javascript">
-function validate(form_id, email)
+<script type-"text/javascript" src="foo.js">

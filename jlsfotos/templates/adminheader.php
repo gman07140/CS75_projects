@@ -9,7 +9,8 @@
         <link href="/css/flinks.css" rel="stylesheet"/>
         <link href="/css/styles.css" rel="stylesheet"/>
         <link href="/css/table.css" rel="stylesheet"/>
-        <link href="/css/menu2.css" rel="stylesheet"/>  
+        <link href="/css/menu2.css" rel="stylesheet"/>
+        <link href="/css/modal.css" rel="stylesheet"/>   
 
         <?php if (isset($title)): ?>
             <title>Vida, arte, photografia: <?= htmlspecialchars($title) ?></title>
@@ -29,6 +30,7 @@
             <ul id="saturday">
                 <li><a href="newclient.php">Add new client</a></li>
                 <li><a href="admintable2.php">Client list</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="logout.php">Log Out</a></li> 
             </ul>
             </div>

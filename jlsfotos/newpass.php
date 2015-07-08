@@ -22,7 +22,7 @@
         else
         {
             // update the password to the users submission
-            $rows = query("UPDATE users SET password =? WHERE userID = ?", crypt($_POST["pass"]), $id);
+            $rows = query("UPDATE users SET password =? WHERE userID =?", crypt($_POST["pass"]), $id);
             echo "Password successfully changed!";
         }
     }
