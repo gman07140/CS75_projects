@@ -1,12 +1,18 @@
 <?php
-// upload all route data into database from BART API
-require("testconn3.php");
+
+/**
+ * bartroutes.php - upload all routes into database from BART API.  For each route upload details: all
+ * stations that lie within each route - page not directly connected to site.  Run beforehand to
+ * populate database.
+ */ 
+
+// require configuration page with functions
+require("bart_config.php");
 
 $bkey = 'ZUVB-UEUQ-ISYQ-DT35';
 $url = "http://api.bart.gov/api/route.aspx?cmd=routes&key=".$bkey;
 $xml = new SimpleXMLElement($url, null, true);
 
-$routes = [];
 $j=0;
 $ids= $xml->routes->route;
 foreach($ids as $id) 
@@ -15,19 +21,13 @@ foreach($ids as $id)
 	$number = $xml->routes->route[$j]->number;
 	$color = $xml->routes->route[$j]->color;
 
-	//if statement to prevent primary key voilations in case data was already entered
+	// if statement to prevent primary key voilations in case data was already entered
 	$test = query("SELECT * FROM routes WHERE rnumber=?", $number);
 
 	if(count($test) == 0)
 	{
 		$sql = query("INSERT INTO routes (routename, rnumber, color) VALUES (?, ?, ?)", $name, $number, $color);
 	}
-
-	$routs[] = [
-		"name" => $name,
-		"number" => $number,
-		"color" => $color
-	];
 
 	// upload route details - all stations that lie in current route
 	$url2 = "http://api.bart.gov/api/route.aspx?cmd=routeinfo&route=".$number."&key=".$bkey;

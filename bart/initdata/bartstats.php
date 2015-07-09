@@ -1,7 +1,13 @@
 <?php
 
-// upload all station data into database from BART API
-require("bart/testconn3.php");
+/**
+ * bartstats.php - Upload all station data into database from BART API - 
+ * not directly connected to site. Run beforehand to
+ * populate database.
+ */ 
+
+// require configuration page with functions
+require("bart_config.php");
 
 $bkey = 'ZUVB-UEUQ-ISYQ-DT35';
 $url = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$bkey."";
@@ -22,13 +28,6 @@ foreach($ids as $id)
 	{
 		$sql = query("INSERT INTO stations (name, abbr, lat, lng) VALUES (?, ?, ?, ?)", $name, $abbr, $lat, $lng);
 	}
-
-	$stations[] = [
-		"name" => $name,
-		"abbr" => $abbr,
-		"lat" => $lat,
-		"lng" => $lng
-	];
     $i++;
 }
 ?>
