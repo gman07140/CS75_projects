@@ -1,0 +1,73 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ *
+ * Global CSS.
+ */
+          
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-height:100%;
+    position:relative;
+}
+
+#num{
+    display: none;
+}
+
+#links
+{
+    font-size: 20px;
+}
+
+#top
+{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#bottom
+{
+    padding-top: 15px;
+   position:relative;
+   text-align: center;
+   bottom:0;
+   width:100%;
+   height:55px;   /* Height of the footer */
+}
+
+ul {
+    padding-left: 0px;
+    list-style-type: inline;
+}
+
+a.categories {
+    padding: 10px 20px 10px 20px;
+    float: center;
+    text-decoration: none;
+    color: blue;
+    border-right: 0px solid black;
+    border-left: 1px solid black;
+}
+
+a.checkout {
+    padding: 10px 20px 10px 20px;
+    float: center;
+    text-decoration: none;
+    color: blue;
+}
+
+
+a:hover {
+color: orange;
+    text-decoration: underline;
+}
+
+li {
+    display: inline;
+}

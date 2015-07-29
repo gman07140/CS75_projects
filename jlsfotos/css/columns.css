@@ -1,0 +1,128 @@
+html {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+background: rgb(125,126,125); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+
+}
+
+html, body {
+  height: 100%;
+}
+
+img.prevpics{
+  width:244px;
+}
+
+img.socialbar{
+  width:40px;
+}
+
+.header
+{
+  text-align: center;
+  padding: 35px 0 25px;
+}
+
+.headertitle
+{
+  text-align: center;
+  padding: 0px 0 0px;
+  color: white;
+}
+
+#wrapper {
+  position: relative;
+  min-height: 100%;
+  width: 960px;
+  margin: 0 auto;
+}
+
+#contents {
+  padding-bottom: 73px;
+  min-height: 340px;
+}
+
+#prevpics {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -65px;
+  margin-left: -490px;
+}
+#prevpics li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  width: 244px;
+  margin: 0 25px;
+}
+
+#prevpics li a {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+#prevpics li a:hover {
+  -webkit-filter: grayscale(100%);
+}
+ 
+
+#socialbar {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: -95px;
+  margin-left: -90px;
+}
+
+#socialbar li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+
+a.small{
+	padding: 10px 26px 10px 26px;
+
+    float: center;
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+a.smallast{
+	padding: 10px 26px 10px 26px; /* order: top, right, bottom, left*/
+
+    float: center;
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid white;
+}
+
+a.small:hover, a.smallast:hover {
+color: yellow;
+    text-decoration: underline;
+}
+
+a.large{
+	padding: 10px 26px 15px 26px;
+    float: center;
+}
+
+#links {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}

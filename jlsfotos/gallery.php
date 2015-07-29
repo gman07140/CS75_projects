@@ -5,14 +5,19 @@
 
     $photos = [];
     
-    $pics = query("SELECT DISTINCT link, imageID, cityid FROM images");
+    $pics = query("SELECT gallerylink, cityid, title, galleryid
+    			   FROM gallery
+    			   GROUP BY gallerylink");
+
+    $count = count($pics);
 
     foreach ($pics as $pic)
     {
         $photos[] = [
-        "imageID" => $pic["imageID"],
-        "link" => $pic["link"],
-        "cityid" => $pic["cityid"]
+        "galleryid" => $pic["galleryid"],
+        "gallerylink" => $pic["gallerylink"],
+        "cityid" => $pic["cityid"],
+        "title" => $pic["title"]
         ];
     }
 
@@ -28,5 +33,5 @@
         ];
     }
           
-    arender("gallery_form.php", ["photos" => $photos, "cities" => $cities, "title" => "Client_Pics"]);
+    render("gallery_form.php", "adminheader.php", ["photos" => $photos, "cities" => $cities, "title" => "Client_Pics"]);
 ?>

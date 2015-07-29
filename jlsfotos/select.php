@@ -16,5 +16,5 @@ require("fconfig.php");
         exit();
         return false;
     }
-    clrender("select_form.php", ["images" => $images, "address" => $address, "title" => "Confirmation"]);
+    render("select_form.php", "clientheader.php", ["images" => $images, "address" => $address, "title" => "Confirmation"]);
 ?>

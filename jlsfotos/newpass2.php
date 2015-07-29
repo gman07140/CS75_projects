@@ -2,6 +2,6 @@
     // configuration
     require("fconfig.php");
 
-    crender("newpass2_form.php");
+    render("newpass2_form.php", "header.php");
 
 ?>

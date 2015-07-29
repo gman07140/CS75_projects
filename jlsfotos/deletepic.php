@@ -15,7 +15,7 @@
         for($i = 0; $i < $count; $i++)
         {
             //echo "<br> value = ".$id[$i]."Jumlah = ".$count ;
-            $sql = query("DELETE FROM images WHERE link='$id[$i]'");
+            $sql = query("DELETE FROM images WHERE imageID='$id[$i]'");
         }
      }
      // if successful refresh page

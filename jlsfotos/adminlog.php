@@ -48,7 +48,7 @@
     }
     else
     {
-        crender("adlogin_form.php");
+        render("adlogin_form.php", "header.php");
     }
 
 ?>

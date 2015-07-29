@@ -39,7 +39,7 @@
                 <?php foreach ($photos as $photo): ?>
                     <li><a class="fancybox" rel="group" title="photos" href="/<?= $photo["link"]?>"$><img src=        
                               "<?= $photo["link"]?>" width="200" height="120" alt=""/></a><input name="data[]" type=
-                              "checkbox" id="data" value="<?php echo $photo['link']; ?>"></li>
+                              "checkbox" id="data" value="<?php echo $photo['imageID']; ?>"></li>
                 <?php endforeach ?>
             </ul>
         </div>

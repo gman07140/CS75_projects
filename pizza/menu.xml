@@ -1,0 +1,304 @@
+<menu>
+	<category name="Pizza">
+		<item food="Tomato &amp; Cheese">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>5.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>9.75</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Onions">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>6.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>10.75</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Peppers">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>6.55</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>11.75</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Two-way combo">
+				<options>2</options>
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>7.95</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>11.80</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Three-way combo">
+				<options>3</options>
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>8.90</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>12.80</price>
+					</size>
+				</sizes>
+		</item>
+		<extras extra="extra cheese">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>1.25</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>1.85</price>
+					</size>
+				</sizes>
+		</extras>
+		<toppings>
+			<topping>onions</topping>
+			<topping>peppers</topping>
+			<topping>broccoli</topping>
+			<topping>fresh garlic</topping>
+			<topping>mushroom</topping>
+			<topping>fresh spinach</topping>
+			<topping>pepperoni</topping>
+			<topping>sausage</topping>
+			<topping>bacon</topping>
+		</toppings>
+	</category>
+	<category name="Salad">
+		<item food="Garden">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>3.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>4.50</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Greek">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>4.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>5.50</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Antipasto">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>4.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>5.50</price>
+					</size>
+				</sizes>
+		</item>
+	</category>
+	<category name="Special_Dinners">
+		<remark>**All dinners served with french fries and salad</remark>
+		<item food="Chicken Wing Dinner">
+			<price>7.25</price>
+		</item>
+		<item food="Gyro Plate">
+			<price>7.25</price>
+		</item>
+		<item food="Chicken Finger Plate">
+			<price>7.25</price>
+		</item>
+	</category>
+		<category name="Specialty_Pizza">
+		<item food="Three aces special">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>9.80</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>15.80</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Mediterranean">
+			<detail>Sliced tomatoes, olives, spinach, fresh garlic, mozzarella, &amp; feta cheese</detail>
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>9.80</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>15.80</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Vegetarian">
+			<detail>Sliced tomatoes, onion, peppers, mushrooms, broccoli, mozzarella</detail>
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>9.80</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>15.80</price>
+					</size>
+				</sizes>
+		</item>
+	</category>
+	<category name="Side_Orders">
+		<item food="Onion Rings">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>2.60</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>2.95</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="French fries">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>2.25</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>2.65</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Spicy fries">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>2.60</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>2.95</price>
+					</size>
+				</sizes>
+		</item>
+	</category>
+	<category name="Calzones">
+		<item food="Vegetarian">
+			<price>7.35</price>
+		</item>
+		<item food="Sausage">
+			<price>7.35</price>
+		</item>
+		<item food="Ham &amp; Cheese">
+			<price>7.35</price>
+		</item>
+	</category>
+	<category name="Wraps">
+		<item food="Turkey Club">
+			<detail>Turkey, cheese, lettuce, tomato, onion, mayo</detail>
+			<price>7.35</price>
+		</item>
+		<item food="Chicken Cobb">
+			<detail>Grilled chicken, bacon, cheese, lettuce, tomato, onion, honey mustard</detail>
+			<price>7.35</price>
+		</item>
+		<item food="Greek Supreme">
+			<detail>Feta cheese, black olives, lettuce, tomato, onion, greek dressing</detail>
+			<price>7.35</price>
+		</item>
+	</category>
+	<category name="Grinders">
+		<item food="Meatless">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>4.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>4.95</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Hamburger">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>4.50</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>4.95</price>
+					</size>
+				</sizes>
+		</item>
+		<item food="Cheeseburger">
+				<sizes>
+					<size>
+						<type>Small</type>
+						<price>4.75</price>
+					</size>
+					<size>
+						<type>Large</type>
+						<price>5.75</price>
+					</size>
+				</sizes>
+		</item>
+	</category>
+	<category name="Pasta">
+		<remark>**All pasta dinners served with garlic bread and salad</remark>
+		<choices class="1">
+			<choice>Spaghetti</choice>
+			<choice>Ziti</choice>
+		</choices>
+		<choices class="2">
+			<choice>Lasagna</choice>
+			<choice>Ravioli</choice>
+			<choice>Manicotti</choice>
+		</choices>
+		<item food="Sauce only">
+			<price>5.40</price>
+			<price2>6.25</price2>
+		</item>
+		<item food="Sausage">
+			<price>6.45</price>
+			<price2>7.25</price2>
+		</item>
+		<item food="Meatball">
+			<price>6.45</price>
+			<price2>7.25</price2>
+		</item>
+	</category>
+</menu>

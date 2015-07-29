@@ -1,0 +1,63 @@
+html {
+background: url("images/flower.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  position: relative;
+  min-height: 100%;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contents {
+  padding-bottom: 73px;
+  min-height: 340px;
+}
+a.enter {
+    float: center;
+    text-decoration: none;
+    color: white;
+}
+
+#link {
+  padding-top: 20px;
+}
+
+a.enter:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+#vcenter {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -285px;
+  color:white;
+}
+
+#links {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+#toppage {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: 19% 0 0 -25%;
+}

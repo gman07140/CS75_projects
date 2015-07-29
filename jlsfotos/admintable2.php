@@ -16,5 +16,5 @@
         ];
     }
           
-    arender("admin_table2.php", ["clients" => $clients, "title" => "Client_Table"]);
+    render("admin_table2.php", "adminheader.php", ["clients" => $clients, "title" => "Client_Table"]);
 ?>

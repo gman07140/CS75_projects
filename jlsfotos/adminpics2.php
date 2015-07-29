@@ -7,7 +7,7 @@
     
     $_SESSION["userid"] = $_GET["userid"];
     
-    $pics = query("SELECT link FROM images WHERE userID = ?", $_SESSION["userid"]);
+    $pics = query("SELECT link, imageID FROM images WHERE userID = ?", $_SESSION["userid"]);
 
     $address = query("SELECT email, username FROM users WHERE userID = ?", $_SESSION["userid"]);
 
@@ -15,8 +15,9 @@
     {
         $photos[] = [
         "link" => $pic["link"],
+        "imageID" => $pic["imageID"]
         ];
     }
           
-    arender("admin_pics2.php", ["photos" => $photos, "address" => $address, "title" => "Client_Pics"]);
+    render("admin_pics2.php", "adminheader.php", ["photos" => $photos, "address" => $address, "title" => "Client_Pics"]);
 ?>

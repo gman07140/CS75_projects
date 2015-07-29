@@ -28,6 +28,6 @@
     }
     else
     {
-        crender("newpass_form.php");
+        render("newpass_form.php", "header.php");
     }
 ?>

@@ -1,15 +1,11 @@
 <?php
 
-    // configuration
-    require("templates/adminheader.php");
-    require("fconfig.php");
+// configuration
+require("fconfig.php");
 
-    // log out current user, if any
-    logout();
+// log out current user, if any
+logout();
 
-    // redirect user
-    redirect("adminlog.php");
-
-require("footer.php"); 
-
+// redirect user
+redirect("columns.php");
 ?>

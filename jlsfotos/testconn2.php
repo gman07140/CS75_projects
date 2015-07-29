@@ -1,6 +1,4 @@
 <?php
-
-
     /**
      * Apologizes to user with message.
      */
@@ -82,11 +80,11 @@
         // return result set's rows, if any
         if ($results !== false)
         {
-	    $colcount = $statement->columnCount();
-		if ($colcount == 0)
-		{
-		    return false;
-		}
+    	    $colcount = $statement->columnCount();
+    		if ($colcount == 0)
+    		{
+    		    return false;
+    		}
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         }
         else
@@ -135,80 +133,28 @@
     /**
      * Renders template, passing in values.
      */
-    function arender($template, $values = [])
+    function render($template, $header, $values = [])
     {
-        // if template exists, render it
-        if (file_exists("templates/$template"))
+        // if header and template exist...
+        if (file_exists("templates/$template") && file_exists("headers/$header"))
         {
             // extract variables into local scope
             extract($values);
 
             // render header
-            require("templates/adminheader.php");
+            require("headers/$header");
 
             // render template
             require("templates/$template");
 
             // render footer
-            require("templates/ffooter.php");
+            require("headers/ffooter.php");
         }
 
         // else err
         else
         {
-            trigger_error("Invalid template: $template", E_USER_ERROR);
-        }
-    }
-    
-    // another render function in case we want a different header shown to clients
-    function crender($template, $values = [])
-    {
-        // if template exists, render it
-        if (file_exists("templates/$template"))
-        {
-            // extract variables into local scope
-            extract($values);
-
-            // render header
-            require("templates/header.php");
-
-            // render template
-            require("templates/$template");
-
-            // render footer
-            require("templates/ffooter.php");
-        }
-
-        // else err
-        else
-        {
-            trigger_error("Invalid template: $template", E_USER_ERROR);
-        }
-    }
-
-    // same as client header, just with a logout button for pages they see while logged in
-    function clrender($template, $values = [])
-        {
-        // if template exists, render it
-        if (file_exists("templates/$template"))
-        {
-            // extract variables into local scope
-            extract($values);
-
-            // render header
-            require("templates/clientheader.php");
-
-            // render template
-            require("templates/$template");
-
-            // render footer
-            require("templates/ffooter.php");
-        }
-
-        // else err
-        else
-        {
-            trigger_error("Invalid template: $template", E_USER_ERROR);
+            trigger_error("Invalid template or header: $template", E_USER_ERROR);
         }
     }
 ?>

@@ -43,6 +43,6 @@
     }
     else
     {
-        crender("clientlogin_form.php");
+        render("clientlogin_form.php", "header.php");
     }
 ?>

@@ -1,28 +1,27 @@
-<div class="wrapper">
-<h1>
+<div class="headertitle">
+<h1>Welcome, 
     <?php   
     $named = query("SELECT username FROM users WHERE userID = ?", $_SESSION["userID"]);
     echo $named[0]["username"];
-    ?>
+    ?>!
     </h1>
+    <h4>Select the pictures you would like in you album and click submit</h4>
 </div>
 
 <form id="form1" name="form1" method="post" action="select.php" onsubmit="myFunction()">
-    <div class="form-group">
+    <div class="headertitle">
         <input name="select" type="submit" id="select" value="Select">
     </div>
-    <div id="container">
         <div id="content">
             <ul>
                 <?php foreach ($photos as $photo): ?>
                     <li><a class="fancybox" rel="group" title="photos" href="/<?= $photo["link"]?>"$><img src=
-                    "<?= $photo["link"]?>" width="200" height="120" alt=""/></a><input name="data[]" type="checkbox" id="
+                    "<?= $photo["link"]?>" height="120" alt=""/></a></br><input name="data[]" type="checkbox" id="
                     data" value="<?php echo $photo["link"]; ?>"></li>
                 <?php endforeach ?>
             </ul>
         </div>
         <hr>
-    </div>
 </form>
 
 

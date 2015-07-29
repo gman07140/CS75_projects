@@ -32,12 +32,13 @@
 	    }
 	    else
 	    {
-			$sql = query("INSERT INTO users (username, password, email) VALUES(?, ?, ?)", $_POST["username"], crypt($_POST["pass"]), $_POST["email"]);
+			$sql = query("INSERT INTO users (username, password, email, comments) 
+                          VALUES(?, ?, ?, ?)", $_POST["username"], crypt($_POST["pass"]), $_POST["email"], $_POST["comments"]);
             echo '<meta http-equiv="refresh" content="0;URL=admintable2.php" />';
 	    }
     }
     else
     {
-        arender("newclient_form.php");
+        render("newclient_form.php", "adminheader.php");
     }
 ?>

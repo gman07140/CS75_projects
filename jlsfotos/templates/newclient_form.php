@@ -16,6 +16,9 @@
 		<input class="form-control" type="text" placeholder="Email" name="email" id="email"/><br />
 		<div id="wwack"></div>
 	</div>
+	<div class="form-group">
+        <textarea class="form-control" name="comments" type="text" cols="100" rows="4" placeholder="enter comments"></textarea><br />
+    </div>
 		<button class="form-control" id="submit">register</button>
   </fieldset>
 </form>

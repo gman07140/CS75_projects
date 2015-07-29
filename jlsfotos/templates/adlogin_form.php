@@ -1,3 +1,4 @@
+<div class="bootstrap">
 <form action="adminlog.php" method="post" id="myForm">
     <fieldset>
         <div class="form-group">
@@ -15,7 +16,8 @@
         </div>
     </fieldset>
 </form>
+<div class="bootstrap">
 <script type="text/javascript" src="java/adlog.js"></script>
-<div>
+<div id="logtext">
     or go to <a href="clientlog.php">client</a> to log in as client
 </div>
