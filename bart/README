@@ -1,0 +1,7 @@
+CS75 project2 - BART
+
+The purpose of this project is to create an interactive map of San Francisco showing train routes for the Bay Area Rapid Transit (BART)
+system.  The user selects their desired route from the main page and the stops for the chosen route appear on the map.  The user can then
+get real-time schedules for the various stops by clicking on their icons.
+
+This project uses php, javascript, and SQL and utilizes the Google Maps API and the BART API.
